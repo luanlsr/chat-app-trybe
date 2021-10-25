@@ -1,4 +1,4 @@
-const {registerChat, getChatMessages} = require('../controllers/chatController');
+const {registerChat, getChatMessages} = require('./controller/chatController');
 const { Router } = require('express');
 
 

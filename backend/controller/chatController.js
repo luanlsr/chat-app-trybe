@@ -1,17 +1,16 @@
 const Model = require('../models/chats');
 
 const registerChat = async (req, res) => {
-    const { user, messages } = req.body;
-    const user = await Model.registerUser(user, messages);
+    const { user, message } = req.body;
+    const chat = await Model.registerChat(user, message);
 
-    res.status(201).json({ message: 'Mensagem Registrada com sucesso!', user, messageChat });
+    res.status(201).json({ message: 'Mensagem Registrada com sucesso!', chat });
 };
 
 const getChatMessages = async (req, res) => {
-  const { user } = req.body;
-  const chat = await Model.findChats(user);
+  const chat = await Model.findChats();
 
-  res.status(200).json({ user: chat.user, message: chat.message });
+  res.status(200).json(chat);
 };
 
 module.exports = {registerChat, getChatMessages}

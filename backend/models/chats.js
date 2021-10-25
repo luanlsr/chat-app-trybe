@@ -1,15 +1,14 @@
 const connect = require('./connection');
 
-const registerChat = async (user, messages) => {
+const registerChat = async (user, message) => {
   const db = await connect();
-  const userCreated = await db.collection('messages').insertOne({ users, messages });
-  console.log('🚀 ~ file: chats.js ~ line 6 ~ registerChat ~ userCreated', userCreated);
+  const userCreated = await db.collection('messages').insertOne({ user, message });
   return userCreated;
 }
 
-const findChats = async (user) => {
+const findChats = async () => {
   const db = await connect();
-  const userData = await db.collection('messages').findOne({ user });
+  const userData = await db.collection('messages').find().toArray();
   return userData;
 }
 
