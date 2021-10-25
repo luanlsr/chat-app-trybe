@@ -4,11 +4,12 @@ const app = express();
 const server = require('http').createServer(app);
 const io = require('socket.io')(server);
 const cors = require('cors');
+
 const bodyParser = require('body-parser');
 const {registerChat} = require('./controller/chatController');
 
 const corsOptions = {
-  origin: 'http://localhost:3001/depoimentos',
+  origin: 'http://localhost:3000',
   optionsSuccessStatus: 200 
 }
 

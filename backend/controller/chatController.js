@@ -9,7 +9,6 @@ const registerChat = async (req, res) => {
 
 const getChatMessages = async (req, res) => {
   const chat = await Model.findChats();
-
   res.status(200).json(chat);
 };
 

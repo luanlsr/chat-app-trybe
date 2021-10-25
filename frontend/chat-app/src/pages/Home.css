@@ -18,7 +18,7 @@ h1 {
 
 .title {
   display: flex;
-  margin: 50px 0;
+  /* margin: 10px 0; */
   justify-content: center;
 }
 
@@ -31,7 +31,8 @@ h1 {
 #mensagensContainer {
   height: 500px;
   width: 500px;
-  background-color: white;
+  background-image: url('https://i.redd.it/qwd83nc4xxf41.jpg');
+  margin-bottom: 20px;
 }
 
 #chat {
@@ -40,12 +41,12 @@ h1 {
   /* justify-content: center; */
   align-items: center;
   flex-direction: column;
-  margin-top: 200px;
+  margin-top: 100px;
 }
 
 input {
-  border-radius: 30px;
-  width: 600px;
+  border-radius: 20px;
+  width: 300px;
   border: 1px solid #ddd;
   height: 50px;
   padding: 0 20px;
@@ -63,16 +64,6 @@ button {
   font-weight: bold;
   color: #FFF;
   cursor: pointer;
-}
-
-
-.messages {
-  width: 600px;
-  height: 400px;
-  margin: 20px 0;
-  border: 1px solid #ddd;
-  padding: 20px;
-  background-image: url('https://i.pinimg.com/originals/62/40/b6/6240b66d5c50c8661eee78b439a7d33c.jpg');
 }
 
 .message {
